@@ -1,6 +1,8 @@
+-- Create necessary PG extensions
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
+-- tables schema
 CREATE TABLE IF NOT EXISTS author (
     uid UUID DEFAULT gen_random_uuid() NOT NULL,
     email VARCHAR(255) NOT NULL,
