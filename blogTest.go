@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/skme902/goBlogTest/dbScript/schemaLoader"
+	"github.com/skme902/goBlogTest/dbScript"
 	)
 
 func main(){
 	fmt.Println("Go Blog Test")
-	schemaLoader.LoadSchema()
+	dbScript.LoadSchema()
 }
