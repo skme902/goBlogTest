@@ -2,7 +2,8 @@
 CREATE EXTENSION IF NOT EXISTS "pgcrypto";
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
--- tables schema
+-- # ======================== tables schema =======================
+-- Author table
 CREATE TABLE IF NOT EXISTS author (
     uid UUID DEFAULT gen_random_uuid() NOT NULL,
     email VARCHAR(255) NOT NULL,
@@ -42,6 +43,7 @@ CREATE TABLE IF NOT EXISTS blog (
     CONSTRAINT blog_id_pkey PRIMARY KEY (uid),
     CONSTRAINT blog_author_fkey FOREIGN KEY (authored_by_id) REFERENCES author
 );
+
 
 CREATE TABLE IF NOT EXISTS comment (
   uid UUID DEFAULT gen_random_uuid() NOT NULL,
